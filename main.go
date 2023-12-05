@@ -81,7 +81,7 @@ func main() {
 		}),
 	)
 
-	lis := fmt.Sprintf("127.0.0.1:%s", port)
+	lis := fmt.Sprintf("0.0.0.0:%s", port)
 	logger.Info("starting server on ", lis)
 	err = http.ListenAndServe(lis, mw(http.DefaultServeMux))
 	if err != http.ErrServerClosed {
